@@ -84,6 +84,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .pokemon .number {
@@ -137,13 +138,146 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
     margin: .25rem 0;
     font-size: .625rem;
     color: #fff;
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+/* modal */
+
+.modal-pokemonDescription {
+    height: 100lvh;
+    width: 100%;
+    background-color: #00000075;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    transition: 300ms opacity ease-in-out, 300ms transform ease-in-out;
+    opacity: .5;
+    transform: scale(.9);
+}
+
+.modal-pokemonDescription-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-pokemonDescription button {
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pokemonDescription {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    height: 85%;
+    max-height: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.4fr;
+}
+
+.pokemonDescription-presentation {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem 1rem 1rem;
+    grid-row: 1/2;
+    color: #fff;
+}
+
+.pokemonDescription-presentation h2 {
+    margin: 0;
+}
+
+.pokemonDescription-presentation .order {
+    align-self: flex-end;
+}
+
+.pokemonDescription-presentationTypes {
+    padding: 0;
+    list-style: none;
+}
+
+.pokemonDescription-presentationTypes li {
+    display: inline;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size: .8rem;
+    filter: brightness(1.1);
+}
+
+.modal-pokemonDescription table {
+    border-collapse: collapse;
+}
+
+.modal-pokemonDescription table th, .modal-pokemonDescription table td {
+    text-align: left;
+    padding: .5rem;
+    font-size: .9rem;
+}
+
+.pokemonDescription-content th {
+    color: rgb(146, 146, 146);
+}
+
+.pokemonDescription-presentation img {
+    max-width: 130px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 15%;
+}
+
+.pokemonDescription-content {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 2rem 1rem 1rem;
+    grid-row: 2/3;
+}
+
+.pokemonDescription-content::-webkit-scrollbar {
+    width: 0;
+}
+
+@media screen and (min-width: 360px) and (max-height: 500px) {
+    .pokemonDescription {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 90%;
+        height: 95%;
+    }
+
+    .pokemonDescription-content {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .pokemonDescription-presentation {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .pokemonDescription-presentation img {
+        top: 0;
+    }
 }
 
 @media screen and (min-width: 380px) {
