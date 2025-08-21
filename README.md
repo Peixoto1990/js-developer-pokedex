@@ -1,6 +1,8 @@
 # Trilha JS Developer - Pokedex
 ## 🆕 Nova Funcionalidade: Modal de Pokémons
 
+[Clique aqui](https://peixoto1990.github.io/js-developer-pokedex/) e veja a Pokedex
+
 Implementei uma nova funcionalidade no projeto que permite exibir informações detalhadas de cada Pokémon por meio de uma **modal interativa e responsiva**.
 
 ### 🔍 Como funciona
